@@ -1,3 +1,4 @@
+// https://my-react-app-beryl-six.vercel.app/restaunt
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
@@ -16,7 +17,7 @@ export default function Menu() {
 
   const setPrice = async (nums) => {
         try {
-          await fetch("http://localhost:5000/", {
+          await fetch("https://my-backend-ckuu.onrender.com/", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(nums),
@@ -43,7 +44,7 @@ export default function Menu() {
 
     const fetchPrices = async () => {
       try {
-        const res = await fetch("http://localhost:5000/get-food");
+        const res = await fetch("https://my-backend-ckuu.onrender.com/get-food");
         const prices = await res.json();
         if (Array.isArray(prices) && prices.length > 0) {
           setBackendPrices(prices);
@@ -94,7 +95,7 @@ export default function Menu() {
 
   const setPreparingFood = async () => {
     try {
-      await fetch("http://localhost:5000/setPreparedFood", {
+      await fetch("https://my-backend-ckuu.onrender.com/setPreparedFood", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(foodData), // ✅ correct data

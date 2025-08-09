@@ -15,7 +15,7 @@ export default function Restaurant() {
 
   const fetchPreparedFood = async () => {
     try {
-      const res = await fetch("http://localhost:5000/getPreparedFood");
+      const res = await fetch("https://my-backend-ckuu.onrender.com/getPreparedFood");
       const data = await res.json();
       setData(data);
     } catch (error) {
@@ -26,7 +26,7 @@ export default function Restaurant() {
   // Delete a dish
   const deleteFood = async (item) => {
     try {
-      await fetch("http://localhost:5000/deletePreparedFood", {
+      await fetch("https://my-backend-ckuu.onrender.com/deletePreparedFood", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(item),
@@ -41,7 +41,7 @@ export default function Restaurant() {
 
   const handleOrder = async (item) => {
     try {
-      await fetch("http://localhost:5000/orderFood", {
+      await fetch("https://my-backend-ckuu.onrender.com/orderFood", {
         method: ["POST"],
         headers: { "Content-Type": "application/json" },
         body:JSON.stringify(item)
@@ -60,7 +60,7 @@ export default function Restaurant() {
   // Reboot app and refresh list
   const handleReboot = async () => {
     try {
-      await fetch("http://localhost:5000/reebotapp");
+      await fetch("https://my-backend-ckuu.onrender.com/reebotapp");
       await fetchPreparedFood();
       navigate("/")
     } catch (error) {

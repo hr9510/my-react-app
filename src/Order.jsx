@@ -10,7 +10,7 @@ export default function Order() {
     useEffect(() => {
         const getOrderedFood = async () => {
             try {
-                const gettingFood = await fetch("http://localhost:5000/getOrderedDish")
+                const gettingFood = await fetch("https://my-backend-ckuu.onrender.com/getOrderedDish")
                 const res = await gettingFood.json()
                 setData(res)
             } catch (error) {

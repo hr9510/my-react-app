@@ -30,7 +30,7 @@ export default function PayBill({ pay, setPay, data }) {
   
   if (userConfirmed) {
     try {
-      const res = await fetch("http://localhost:5000/payBill", {
+      const res = await fetch("https://my-backend-ckuu.onrender.com/payBill", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body : JSON.stringify({ id: idPay })
