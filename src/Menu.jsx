@@ -122,19 +122,33 @@ export default function Menu() {
 
   return (
     <div className="min-h-screen p-6 bg-gradient-to-br from-gray-800 to-black min-w-fit">
-      <nav className="grid justify-center items-baseline mb-8 text-center sm:flex sm:justify-between space-y-[2vh]">
-        <form onSubmit={handleSubmit} className="relative">
-          <input value={Length} onChange={(e)=>setLength(e.target.value)} type="text" placeholder="Total 30 foods available" className="bg-transparent border-white outline-none border-[2px] h-[4vh] p-[1vh] text-white" />
-          <button type="submit" className="text-black bg-white h-[4vh] border-white border-[5px] absolute">Search</button>
-        </form>
-        <h1 className="text-4xl font-bold text-white ">OUR MENU</h1>
-        <button
-          onClick={() => navigate("/restaunt")}
-          className="px-6 py-2 text-xl font-bold transition bg-white border-[2px] border-white rounded-xl hover:bg-transparent hover:text-white"
-        >
-          Restaurant
-        </button>
-      </nav>
+      <nav className="flex flex-col items-center justify-center mb-8 text-center space-y-[3vh] sm:flex sm:flex-row sm:justify-between sm:items-center sm:space-y-0 sm:space-x-4">
+  <form onSubmit={handleSubmit} className="flex items-center justify-center">
+    <input
+      value={Length}
+      onChange={(e) => setLength(e.target.value)}
+      type="text"
+      placeholder="Total 30 foods available"
+      className="bg-transparent border-white outline-none border-[2px] h-[4vh] p-[1vh] text-white"
+    />
+    <button
+      type="submit"
+      className="text-black font-semibold bg-white h-[4vh] border-white border-[5px] flex items-center justify-center px-4"
+    >
+      Search
+    </button>
+  </form>
+
+  <h1 className="text-4xl font-bold text-white">OUR MENU</h1>
+
+  <button
+    onClick={() => navigate("/restaunt")}
+    className="px-6 py-2 text-xl font-bold transition-all duration-500 bg-white border-[2px] border-white rounded-xl hover:bg-transparent hover:text-white"
+  >
+    Restaurant
+  </button>
+</nav>
+
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {dishes.map((item, idx) => {
           const priceObject = backendPrices[idx];

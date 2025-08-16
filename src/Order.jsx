@@ -28,9 +28,9 @@ export default function Order() {
                 {pay 
                 ?
                 <div>
-                    <nav className='relative flex items-center justify-center'>
+                    <nav className='flex flex-col items-center justify-center sm:flex-row'>
                         <h1 className="mb-8 text-4xl font-bold text-center text-white">YOUR ORDER</h1>
-                        <button onClick={() => navigate("/restaunt")} className="absolute mb-8 text-xl font-bold text-center bg-white hover:text-white right-6 px-[2vw] py-[1vh] rounded-xl hover:bg-transparent hover:outline outline transition-all duration-300 outline-[2px]">
+                        <button onClick={() => navigate("/restaunt")} className="mb-8 sm:absolute sm:right-6 text-xl font-bold text-left bg-white hover:text-white  px-[2vw] py-[1vh] rounded-xl hover:bg-transparent hover:outline outline transition-all duration-500 outline-[2px]">
                             Restaunt
                         </button>
                     </nav>
