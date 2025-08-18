@@ -166,7 +166,7 @@ export default function Menu() {
               <h2 className="mt-2 text-2xl font-semibold text-gray-800 truncate">
                 {idx+1}. {item.alt_description || "Delicious Dish"}
               </h2>
-              <div className="flex items-baseline mt-3 justify-evenly">
+              <div className="flex items-baseline mt-6 justify-evenly">
                 <h2 className="text-2xl font-semibold text-green-800">
                   ₹ {dishPrice}
                 </h2>

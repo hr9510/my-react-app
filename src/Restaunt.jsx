@@ -93,7 +93,7 @@ export default function Restaurant() {
           {data.map((item, index) => (
             <div
               key={item.id || index}
-              className="w-full h-[46vh] bg-white text-center rounded-2xl shadow-xl hover:h-[60vh] overflow-hidden transition-all duration-900"
+              className="w-full h-[46vh] bg-white text-center rounded-2xl shadow-xl hover:h-[61vh] overflow-hidden transition-all duration-900"
             > 
               <img
                 src={item.image}
@@ -103,7 +103,7 @@ export default function Restaurant() {
               <p className="px-2 mt-2 font-medium text-gray-700 truncate">
                 {index + 1}. {item.description || "No Description"}
               </p>
-              <div className="flex items-center mt-2 justify-evenly">
+              <div className="flex items-center mt-5 justify-evenly">
                 <h2 className="text-2xl font-semibold text-green-800">
                   ₹ {item.price || "N/A"}
                 </h2>
